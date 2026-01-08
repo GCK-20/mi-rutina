@@ -1,0 +1,245 @@
+:root {
+  --color-bg: #F3E8FF;
+  --color-bg-secondary: #E9D5FF;
+  --color-primary: #9333EA;
+  --color-primary-hover: #7E22CE;
+  --color-text: #1E1B4B;
+  --color-text-secondary: #6B21A8;
+  --color-border: #C084FC;
+}
+
+body {
+  background-color: #F3E8FF; /* Lila claro */
+  color: #1E1B4B; /* Texto oscuro */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: #E9D5FF; /* Lavanda suave */
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
+}
+
+h2 {
+  color: #6B21A8; /* Púrpura medio */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h1, h3 {
+  color: var(--color-text-secondary);
+}
+
+button {
+  background-color: #9333EA; /* Morado intenso */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7E22CE; /* Morado oscuro */
+}
+
+
+input, select, textarea {
+  border: 1px solid #C084FC; /* Violeta pastel */
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  color: #6B21A8;
+  font-weight: bold;
+}
+
+.error-message {
+  background-color: #FFE4E6;
+  color: #B91C1C;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between; /* distribuye horizontalmente */
+  align-items: center; /* alinea verticalmente */
+  gap: 1rem; /* espacio entre elementos */
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column; /* apila verticalmente */
+  gap: 1rem;
+}
+
+/* Layout general del dashboard */
+.dashboard {
+  min-height: 100vh;
+  background: #f7f5fb;
+  color: #2d2a32;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.dashboard-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e6e1f0;
+  background: #ffffff;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: #5e2b97; /* morado elegante */
+}
+
+/* Nav */
+.dashboard-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid #e6e1f0;
+  background: #fcfbff;
+}
+
+.dashboard-nav a {
+  color: #5e2b97; /* morado elegante */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-nav a:hover {
+  background: #efe9fa;
+}
+
+/* Clase activa para resaltar la sección actual */
+.dashboard-nav .active {
+  background: #e1d5f7;
+  color: #45226e;
+}
+
+.dashboard-nav a:hover {
+  background: #efe9fa;
+}
+
+/* Contenido principal */
+.dashboard-content {
+  padding: 1.5rem 2rem;
+  flex: 1;
+}
+
+/* Secciones con Grid: form + list */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Tarjetas/Paneles básicos para consistencia visual */
+.section > * {
+  background: #ffffff;
+  border: 1px solid #ece8f5;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+/* Tarjeta de clima */
+.weather-card {
+  background: #ffffff;
+  border: 1px solid #ece8f5;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 6px rgba(90, 50, 150, 0.15);
+  color: #2d2a32;
+}
+
+.weather-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #5e2b97; /* morado elegante */
+  font-size: 1.2rem;
+}
+
+.weather-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.register-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #ece8f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(90, 50, 150, 0.15);
+}
+
+.register-form h2 {
+  color: #5e2b97;
+  margin-bottom: 1rem;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #5e2b97;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background: #45226e;
+}
+
+.welcome-message {
+  font-size: 1.1rem;
+  color: #5e2b97; /* morado elegante */
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-content {
+    padding: 1rem;
+  }
+  .dashboard-nav {
+    flex-wrap: wrap;
+  }
+}
